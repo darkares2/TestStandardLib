@@ -3,20 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	  <Version>1.0.9</Version>
+	  <Version>1.0.16</Version>
   </PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-		<DebugType>portable</DebugType>
-		<DebugSymbols>true</DebugSymbols>
-		<PublishRepositoryUrl>true</PublishRepositoryUrl>
-
-		<!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->
-		<EmbedUntrackedSources>true</EmbedUntrackedSources>
-
-		<!-- Optional: Build symbol package (.snupkg) to distribute the PDB containing Source Link -->
-		<IncludeSymbols>true</IncludeSymbols>
+	<EmbedAllSources>true</EmbedAllSources>
+      <IncludeSymbols>true</IncludeSymbols>
+	  <DebugType>portable</DebugType>
+	  <DebugSymbols>true</DebugSymbols>
+      <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
-	</ItemGroup>
 </Project>
